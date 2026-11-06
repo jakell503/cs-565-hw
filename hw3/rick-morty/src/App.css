@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+nav {
+  margin-bottom: 30px;
+}
+
+nav a {
+  margin-right: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th,
+td {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+
+th {
+  background-color: #eeeeee;
+}
+
+td img {
+  width: 80px;
+  height: 80px;
+}
+
+li {
+  margin-bottom: 10px;
+}
