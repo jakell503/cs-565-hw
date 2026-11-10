@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 
 const API_URL = 'https://rickandmortyapi.com/api';
-
+const MAX_CHARACTERS = 100; // The maximum number of characters to display on the
 // SECTION 1: API REQUESTS
 
 async function getAllCharacters() {
@@ -29,7 +29,6 @@ async function getAllCharacters() {
 
   return characters;
 }
-
 
 async function getAllLocations() {
   const locations = [];
@@ -71,7 +70,9 @@ function Characters() {
   // This runs after the first page appears
   useEffect(() => {
     getAllCharacters()
-      .then((allCharacters) => setCharacters(allCharacters.slice(0, 100))) // Filter to the first 100 characters and save them in state.
+      .then((allCharacters) =>
+        setCharacters(allCharacters.slice(0, MAX_CHARACTERS)),
+      ) // Filter to the first 100 characters and save them in state.
       .catch((requestError) => setError(requestError.message));
   }, []); //[] array means that useEffect doesn't have any dependencies on any state variables. It will only run once when the page first appears/renders.
 
